@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-
-    state = {
-        count: 0,
-        tags: ['tag1', 'tag2', 'tag3']
-    }
-
-    constructor() {
-        super();
-
+    
+    constructor(props) {
+        super(props);
+       
         // Formal Approch to bind the handler
         this.handleIncrement = this.handleIncrement.bind(this);
         this.handleDecrement = this.handleDecrement.bind(this);
     } 
+
+    state = {
+        count: this.props.value,
+        tags: ['tag1', 'tag2', 'tag3']
+    }  
 
     handleIncrement() {
         this.setState({ count: this.state.count + 1})
@@ -24,12 +24,13 @@ class Counter extends Component {
     }
 
     render() {
-
+    
         return (
             <div>
                 <span className={ this.getBadgetClasses() }>{this.formatCount()}</span>
                 <button onClick={this.handleIncrement} className="btn btn-primary px-3 btn-sm">+</button>
-                <button onClick={this.handleDecrement} className="btn btn-primary px-3 btn-sm">-</button>
+                <button onClick={this.handleDecrement} className="btn btn-secondary px-3 btn-sm">-</button>
+                <button onClick={() => this.props.onDelete(this.props.id)} className="btn btn-danger px-3 btn-sm">Delete</button>
                 {/* {this.renderTags()} */}
             </div>
             );
@@ -53,7 +54,5 @@ class Counter extends Component {
         return count === 0 ? "Zero" : count;
     }
 }
-
-
 
 export default Counter;
