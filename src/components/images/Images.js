@@ -1,12 +1,13 @@
 import React, { Component, Fragment } from "react";
 
-import './images.css';
+import './Images.css';
 
 class Image extends Component {
     render() {
+
         return(
             <Fragment>
-                <img class="card_image rounded-circle img-thumbnail" src={this.props.img} alt="" />
+                <img className={this.props.classes} src={this.props.src} alt={this.props.alt} />
             </Fragment>
         );
     }

@@ -1,18 +1,39 @@
 import React, { Component, Fragment } from 'react';
 import './Navbar.css';
 
+import Image from "../images/Images";
+
 class Navbar extends Component {
+
+    constructor(props) {
+      super(props);
+      
+      this.state = {
+        logotype: this.props.logotype,
+        logosrc: this.props.logosrc,
+        logoalt: 'Company Site Logo'
+      }
+
+    }
+
     render(){ 
-        return(
+
+      let logo;
+      if (this.state.logotype==='image') {
+        logo = <Image src={this.state.logosrc} classes="logo-image img-fluid" alt={this.state.logoalt} />
+      } else {
+        logo = <div className="brand-name">{this.props.brandname}</div>
+      }
+
+      return(
+        
             <Fragment>
 
                 {/* Navbar Start */}
-                  <nav className="navbar navbar-expand-lg navbar-light w-100  text-uppercase">
-                     
+                  <nav className={this.props.classes}>
+                  
                       <a className="navbar-brand font-weight-bold d-inline-block" href="/test">
-                          {/*<!-- Company Logo -->*/}
-                          <h3>{this.props.brandname}</h3>
-                          {/* <img className="logo-image img-fluid" src="{}" alt="companysite" /> */}
+                       {logo}
                       </a>
 
                       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +61,7 @@ class Navbar extends Component {
                       </div>
                   </nav>
                   {/* Navbar End */}
-                  
+
             </Fragment>
         );
     }
