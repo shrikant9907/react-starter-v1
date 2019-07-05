@@ -114,7 +114,26 @@ class Home extends Component {
 				 			</div>
 				 		 
 			 	</section>
-			 	{/* Section 5 End */}
+				{/* Section 5 End */}
+
+				{/*<!-- Section 6 Start -->*/}
+				<section className="section_4 py-5 bg-light">
+			 		<div className="container">
+					 <div className="row">
+				 			<div className="col mb-5">
+				 			  <h5 className="section_heading2 text-center">Testimonials</h5>
+				 			</div>
+				 		</div>
+				 				 <div className="row">
+
+				 				  <Card type="pricingCard" />
+				 				 	 
+				 				 </div>				
+				 			</div>
+				 		 
+			 	</section>
+			 	{/* Section 6 End */} 
+
 			</div>
 		);
 	}
