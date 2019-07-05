@@ -6,8 +6,8 @@ import Content from './components/content/Content';
 import Footer from './components/footer/Footer';
 
 class App extends Component {
-
-  render() {
+ 
+  render() { 
     return (
       <Fragment>
           <Header brandname="Company Name" />

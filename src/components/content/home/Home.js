@@ -1,6 +1,8 @@
 import React, { Component} from "react";
 import './Home.css';
 
+import Card from '../../card/Card';
+
 
 class Home extends Component {
 	render() {
@@ -187,7 +189,26 @@ class Home extends Component {
 				 		</div>
 				 	</div>
 			 	</section>
-			 	{/* Section 4 End */}
+				 {/* Section 4 End */}
+				 
+
+				{/*<!-- Section 5 Start -->*/}
+					<section className="section_4 py-5 bg-light">
+			 		<div className="container">
+					 <div className="row">
+				 			<div className="col mb-5">
+				 			  <h5 className="section_heading2 text-center">Testimonials</h5>
+				 			</div>
+				 		</div>
+				 				 <div className="row">
+
+				 				  <Card type="testimonial" />
+				 				 	 
+				 				 </div>				
+				 			</div>
+				 		 
+			 	</section>
+			 	{/* Section 5 End */}
 			</div>
 		);
 	}
