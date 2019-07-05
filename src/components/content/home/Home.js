@@ -132,58 +132,9 @@ class Home extends Component {
 				 			</div>
 				 			<div className="col-12 col-md-6">
 				 				 <div className="row">
-				 				 	<div className="col-12 col-sm-6">
-			 				 			{/*<!-- Card code start here -->*/}
-										<div className="card mb-5 card_with_icon2 pt-3">
-											<div className="card-icon rounded-circle mx-auto text-center text-white py-3">
-										 		<i className="fab fa-php"></i>
-											</div>
-											<div className="card-body text-center">
-												<h5 className="card-title font-weight-bold">Web Develpoment</h5>
-												<p className="card-text mb-0">We provide Fast turnaround time with Best quality at reasonable price. We create static websites, WordPress, Joomla, Drupal, CMS, Custom Programming etc. Professional creative web design at affordable price.</p>
-									      	</div>
-										</div>
-										{/*<!-- Card code start End Here -->*/}
-				 				 	</div>
-				 				 	<div className="col-12 col-sm-6">
-			 				 			{/*<!-- Card code start here -->*/}
-										<div className="card mb-4 card_with_icon2 pt-3">
-											<div className="card-icon rounded-circle mx-auto text-center text-white py-3">
-										 		<i className="fab fa-php"></i>
-											</div>
-											<div className="card-body text-center">
-												<h5 className="card-title font-weight-bold">App Develpoment</h5>
-												<p className="card-text mb-0">Android or iOS (Iphone, Ipad, Ipod ) Custom application development with high quality and low cost. We have made apps that are featured in many popular review websites. LET'S TALK Contact us to discuss your ideas and concept, and we would love to give you a no obligation free quote for bringing your need to reality.</p>
-									      	</div>
-										</div>
-										{/*<!-- Card code start End Here -->*/}
-				 				 	</div>
-				 				 		 				 	<div className="col-12 col-sm-6">
-			 				 			{/*<!-- Card code start here -->*/}
-										<div className="card mb-4 card_with_icon2 pt-3">
-											<div className="card-icon rounded-circle mx-auto text-center text-white py-3">
-										 		<i className="fab fa-php"></i>
-											</div>
-											<div className="card-body text-center">
-												<h5 className="card-title font-weight-bold">Graphics Design</h5>
-												<p className="card-text mb-0">Graphic design is more than just pictures and drawings. It is the art of communication, and problem solving through imagery. Our proven creative graphic design services speak of your brand, thus establishing an instant connection with your customers. Realize your vision for your next design with a digital platform that’s built to perform.</p>
-									      	</div>
-										</div>
-										{/*<!-- Card code start End Here -->*/}
-				 				 	</div>
-				 				 	<div className="col-12 col-sm-6">
-			 				 			{/*<!-- Card code start here -->*/}
-										<div className="card mb-4 card_with_icon2 pt-3">
-											<div className="card-icon rounded-circle mx-auto text-center text-white py-3">
-										 		<i className="fab fa-php"></i>
-											</div>
-											<div className="card-body text-center">
-												<h5 className="card-title font-weight-bold">Blockchain</h5>
-												<p className="card-text mb-0">The fever of blockchain seems to take on most of the current industries as we know of, Bitcoin showed us a glimpse of a world without banks and financial institutions. We work with blockchain to provide our customers with more security and new technology.</p>
-									      	</div>
-										</div>
-										 {/*Card code start End Here*/}
-				 				 	</div>
+
+								  <Card type="basic" />
+				 				 	
 				 				 </div>				
 				 			</div>
 				 		</div>
