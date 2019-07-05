@@ -36,55 +36,10 @@ class Home extends Component {
 				 			</div>
 				 		</div>
 				 		<div className="row">
-				 			<div className="col">
-
-								{/*<!-- Card With Right Icon --*>*/}
-								<div className="card mb-3 card_with_icon1 right_icon position-relative py-4 border-0 rounded rounded-2">
-								    <div className="card-icon position-absolute rounded-circle text-white text-center py-3">
-								      <i className="fas fa-cloud"></i>
-								    </div>
-								      <div className="card-body">
-								        <h5 className="card-title font-weight-bold">Super Fast Services</h5>
-								        <p className="card-text mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								      </div>
-								</div>
-
-								{/*<!-- Card With Right Icon -->*/}
-								<div className="card mb-3 card_with_icon1 right_icon position-relative py-4 border-0 rounded rounded-2">
-								    <div className="card-icon position-absolute rounded-circle text-white text-center py-3">
-								      <i className="fas fa-cloud"></i>
-								    </div>
-								      <div className="card-body">
-								        <h5 className="card-title font-weight-bold">Super Fast Services</h5>
-								        <p className="card-text mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								      </div>
-								</div>					
-				 			</div>
-				 			<div className="col">
-				 					 			 	
-				 			 	{/*<!-- Card With Left Icon -->*/}
-								<div className="card mb-3 card_with_icon1 position-relative py-4 border-0 rounded rounded-2">
-								    <div className="card-icon position-absolute rounded-circle text-white text-center py-3">
-								      <i className="fas fa-cloud"></i>
-								    </div>
-								      <div className="card-body">
-								        <h5 className="card-title font-weight-bold">Super Fast Services</h5>
-								        <p className="card-text mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								      </div>
-								</div>
-
-				 			 	{/*<!-- Card With Left Icon -->*/}
-								<div className="card mb-3 card_with_icon1 position-relative py-4 border-0 rounded rounded-2">
-								    <div className="card-icon position-absolute rounded-circle text-white text-center py-3">
-								      <i className="fas fa-cloud"></i>
-								    </div>
-								      <div className="card-body">
-								        <h5 className="card-title font-weight-bold">Super Fast Services</h5>
-								        <p className="card-text mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-								      </div>
-								</div>
-
-				 			</div>
+				 			
+							{/*<!-- Card With Right Icon --*>*/}
+							<Card type="iconCard" />												
+				 			
 				 		</div>
 				 	</div>
 			 	</section>
@@ -133,7 +88,7 @@ class Home extends Component {
 				 			<div className="col-12 col-md-6">
 				 				 <div className="row">
 
-								  <Card type="basic" />
+								  	<Card type="basic" />
 				 				 	
 				 				 </div>				
 				 			</div>

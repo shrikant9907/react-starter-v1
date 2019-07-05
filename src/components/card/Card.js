@@ -3,6 +3,7 @@ import './Card.css';
 
 import BasicCard from './basic/Basic';
 import TestimonialCard from './testimonial/Testimonial';
+import IconCard from './iconcard/IconCard'
 
 class Card extends Component {
  
@@ -60,6 +61,33 @@ class Card extends Component {
                 text: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
             }
              
+        ],
+        iconCarddata: [
+            {
+                title: 'Card Title',
+                icon: <i className="fas fa-cloud"></i>,
+                iconLocation: 'right',
+                text: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+            },
+            {
+                title: 'Company Name',
+                icon: <i className="fas fa-cloud"></i>,
+                iconLocation: 'right',
+                text: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+            },
+            {
+                title: 'Company Name',
+                icon: <i className="fas fa-cloud"></i>,
+                iconLocation: 'left',
+                text: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+            },
+            {
+                title: 'Company Name',
+                icon: <i className="fas fa-cloud"></i>,
+                iconLocation: 'left',
+                text: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+            }
+             
         ]
     }  
 
@@ -67,10 +95,12 @@ class Card extends Component {
 
         let card;
         if (this.props.type==='testimonial') {
-            card =  this.state.testidata.map(sdata => <div className="col-12 col-sm-4"><TestimonialCard data={sdata} /></div>);
+            card =  this.state.testidata.map(sdata => <div className="col-12 col-sm-4"><TestimonialCard data={sdata} key="1" /></div>);
         } else if (this.props.type==='basic') {
-            card =  this.state.basicdata.map(sdata => <div className="col-12 col-sm-6"><BasicCard data={sdata} /></div>);
-        } else {
+            card =  this.state.basicdata.map(sdata => <div className="col-12 col-sm-6"><BasicCard data={sdata} key="2" /></div>);
+        } else if (this.props.type==='iconCard') {
+            card =  this.state.iconCarddata.map(sdata => <div className="col-12 col-sm-6"><IconCard data={sdata} key="3" /></div>);
+        }else {
             card = <p>Cart type not given.</p>
         }
 
