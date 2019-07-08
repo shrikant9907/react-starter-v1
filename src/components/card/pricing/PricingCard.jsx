@@ -17,7 +17,6 @@ class PricingCard extends Component{
             <hr /> 
             
             <List type="basiclist" />
-          
             <a href="/test" className="btn px-4 py-2 btn-success">Choose Plan</a>
           </div>
         </div>
