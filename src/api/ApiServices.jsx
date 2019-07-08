@@ -18,19 +18,19 @@ class ApiServices{
         return axios.get(url);
     }
 
-    deleteData(customer){
-        const url = `${API_URL}${customer.pk}`;
+    deleteData(inputobject){
+        const url = `${API_URL}${inputobject.pk}`;
         return axios.delete(url);
     }
 
-    createData(customer){
+    createData(inputobject){
         const url = `${API_URL}`;
-        return axios.post(url,customer);
+        return axios.post(url,inputobject);
     }
 
-    updateUpdate(customer){
-        const url = `${API_URL}${customer.pk}`;
-        return axios.put(url,customer);
+    updateUpdate(inputobject){
+        const url = `${API_URL}${inputobject.pk}`;
+        return axios.put(url,inputobject);
     }
 
 }

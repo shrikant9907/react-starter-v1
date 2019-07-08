@@ -1,7 +1,10 @@
 import React, { Component} from "react";
 import './Home.css';
 
-import PersonList from '../../../example/PersonList';
+// import AddPerson from '../../../example/AddPerson';
+// import PersonList from '../../../example/PersonList';
+import PersonById from '../../../example/PersonById';
+
 
 import Card from '../../card/Card';
 
@@ -9,8 +12,7 @@ class Home extends Component {
 	render() {
 		return(
 			<div>
-				<PersonList url="https://jsonplaceholder.typicode.com/users" />
-			 	{/*<!-- Banner Section Start -->*/}
+				{/*<!-- Banner Section Start -->*/}
 			 	<section className="banner_section py-5">
 			 		<div className="container">
 				 		<div className="row">
@@ -135,6 +137,25 @@ class Home extends Component {
 				 		 
 			 	</section>
 			 	{/* Section 6 End */} 
+
+			 	{/*<!-- Example Start-->*/}
+			 	<section className="section_2 bg-light py-5">
+			 		<div className="container">
+			 			<div className="row">
+				 			<div className="col text-center mb-5">
+				 			  <h5 className="section_heading">Example</h5>
+				 			</div>
+				 		</div>
+				 		<div className="row">
+						 	{/* <PersonList /> */}
+							 <PersonById />
+							{/* <AddPerson /> */}
+							{/* <PersonList /> */}
+			 				
+				 		</div>
+				 	</div>
+			 	</section>
+			 	{/*<!-- Example end -->*/}
 
 			</div>
 		);

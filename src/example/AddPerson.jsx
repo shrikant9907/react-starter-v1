@@ -1,6 +1,9 @@
+import React, { Component } from "react";
 
-import React, { Component, Fragment } from "react";
-import axios from 'axios';
+
+// API
+import  ApiServices  from  '../api/ApiServices';
+const  Api  =  new  ApiServices();
 
 class AddPerson extends Component {
   state = {
@@ -18,11 +21,11 @@ class AddPerson extends Component {
       name: this.state.name
     };
 
-    axios.post(`https://jsonplaceholder.typicode.com/users`, { user })
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
+     // Usering API in this
+     Api.createData(user).then(result => { 
+      console.log(result); 
+    });
+
   }
 
   render() {
