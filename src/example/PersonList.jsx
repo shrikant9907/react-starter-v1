@@ -1,7 +1,10 @@
 import React, { Component, Fragment } from "react";
 
 import UserList from '../components/lists/userlist/UserList';
-import axios from 'axios';
+
+// API
+import  ApiServices  from  '../api/ApiServices';
+const  Api  =  new  ApiServices();
 
 class PersonList extends Component {
   state = {
@@ -9,10 +12,10 @@ class PersonList extends Component {
   }
 
   componentDidMount() {
-    axios.get(this.props.url)
-      .then(res => {
-        this.setState({ persons: res.data });
-      })
+
+    // Usering API in this
+    Api.getData().then(result => { this.setState({ persons: result })  });
+      
   }
 
   render() {
