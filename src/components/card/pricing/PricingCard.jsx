@@ -14,14 +14,10 @@ class PricingCard extends Component{
 
             <span>Most basic features of a multi vendor store</span>
             
-            <hr />
+            <hr /> 
             
-            <ul className="list-group list-unstyled text-muted  mb-2 text-left">
-
-              <List type="basiclist" />
-            </ul>
-              {/* <NestedList /> */}
-
+            <List type="basiclist" />
+          
             <a href="/test" className="btn px-4 py-2 btn-success">Choose Plan</a>
           </div>
         </div>
