@@ -5,15 +5,13 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import './index.css';
-// import App from './App';
-
-import ModalBasic from './components/modal/basic/ModalBasic'
+import App from './App';
 
 // import Counters from './components/counters'
 
 import * as serviceWorker from './serviceWorker';
  
-ReactDOM.render(<ModalBasic title="This is modal title" content="this is modal content" showclose="yes" modalid="basic_modal1" classes="modal fade basic_modal " />, document.getElementById('root'));
+ReactDOM.render, document.getElementById((<App />, 'root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

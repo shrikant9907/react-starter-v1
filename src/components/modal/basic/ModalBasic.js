@@ -1,3 +1,7 @@
+
+// import ModalBasic from './components/modal/basic/ModalBasic'
+// <ModalBasic title="This is modal title" content="this is modal content" showclose="yes" modalid="basic_modal1" classes="modal fade basic_modal " />
+
 import React, { Component, Fragment } from "react";
 import './ModalBasic.css';
    
@@ -72,7 +76,7 @@ class BasicPopup extends Component {
                         </div>
                         </div>
                     </div>
-                </div>
+                </div> 
             </Fragment>
         );
     }
