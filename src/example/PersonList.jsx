@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 
-import UserList from './userlist/UserList';
+import UserList from '../components/lists/userlist/UserList';
 import axios from 'axios';
 
 class PersonList extends Component {

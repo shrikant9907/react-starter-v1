@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import './Home.css';
 
-import PersonList from '../../lists/PersonList';
+import PersonList from '../../../example/PersonList';
 
 import Card from '../../card/Card';
 
