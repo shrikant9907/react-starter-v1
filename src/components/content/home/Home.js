@@ -1,13 +1,15 @@
 import React, { Component} from "react";
 import './Home.css';
 
-import Card from '../../card/Card';
+import PersonList from '../../lists/PersonList';
 
+import Card from '../../card/Card';
 
 class Home extends Component {
 	render() {
 		return(
 			<div>
+				<PersonList url="https://jsonplaceholder.typicode.com/users" />
 			 	{/*<!-- Banner Section Start -->*/}
 			 	<section className="banner_section py-5">
 			 		<div className="container">
