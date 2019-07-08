@@ -14,9 +14,14 @@ class PersonList extends Component {
   componentDidMount() {
 
     // Usering API in this
-    Api.getData().then(result => { this.setState({ persons: result })  });
+    Api.getData().then(result => { 
+      // console.log(result);
+      this.setState({
+       persons: result.data 
+      })  
+    });
       
-  }
+  } 
 
   render() {
     return (

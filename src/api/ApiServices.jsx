@@ -10,12 +10,12 @@ class ApiServices{
  
     getData() {
         const url = `${API_URL}`;
-        return axios.get(url).then(response => response.data);
+        return axios.get(url);
     }  
 
     getDataById(pk) {
         const url = `${API_URL}${pk}`;
-        return axios.get(url).then(response => response.data);
+        return axios.get(url);
     }
 
     deleteData(customer){
