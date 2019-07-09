@@ -31,7 +31,8 @@ class NewPost extends Component {
   handleSubmit(event){ 
     event.preventDefault();
     if(this.state.title.trim() && this.state.content.trim() && this.state.author.trim()) {
-      console.log(this.state);    
+      // console.log(this.state);
+      this.props.onAddPost(this.state);    
       this.handleReset();
     }
    }

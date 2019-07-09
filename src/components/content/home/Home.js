@@ -6,7 +6,7 @@ import './Home.css';
 import PersonById from '../../../example/PersonById';
 import Counter from '../../counter/counter2container';
 import Card from '../../card/Card';
-import AddPost from '../../blog/NewPost';
+import AddPost from '../../blog/NewPostContainer';
 
 class Home extends Component {
 	render() {
@@ -191,8 +191,7 @@ class Home extends Component {
 			   		    		</div>
 								<div className="col-12 col-md-6">
 									<h3>Post List</h3>
-									<AddPost />  
-			   		    		</div>
+								</div>
 				 		</div>
 				 	</div>
 			 	</section>
