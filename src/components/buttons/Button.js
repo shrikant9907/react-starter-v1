@@ -9,7 +9,7 @@ class Buttons extends Component {
   render(){
     return(
       <Fragment>
-        <button type={this.props.btnTypes} className={this.props.classes} >{this.props.label}</button>
+        <button type={this.props.btnTypes} className={this.props.classes} onClick={this.props.onClick} >{this.props.label}</button>
       </Fragment>
     );
   }

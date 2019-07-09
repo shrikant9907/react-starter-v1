@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Post.css';
 
+import Button from '../buttons/Button';
+
 class NewPost extends Component {
 
   constructor(props) {
@@ -53,12 +55,18 @@ class NewPost extends Component {
             <div className="form-group"> 
               <textarea className="w-100 px-1" value={this.state.content} name="content" placeholder="Post Content" onChange={this.handleOnChange} />
             </div>
-            <div className="form-group">
+            <div className="form-group mb-4">
               <input className="w-100 px-1" type="text" value={this.state.author} name="author" placeholder="Post Author" onChange={this.handleOnChange} />
             </div>
-            <div className="form-group">
-              <input type="submit" className="btn btn-primary w-100 mb-3" value="Add Post" />
-              <input type="reset" value="Reset" className="btn btn-secondary w-100 mb-3" onClick={this.handleReset} />
+            <div className="form-group mb-0">
+              <div className="form-row">
+                <div className="col">
+                  <Button btnTypes="submit" classes="btn btn-primary w-100" label="Add Post"/> 
+                </div>
+                <div className="col"> 
+                  <Button btnTypes="reset" classes="btn btn-secondary w-100" label="Reset" onClick={this.handleReset} /> 
+                </div>
+              </div>
             </div>
           </form>
         </div>
