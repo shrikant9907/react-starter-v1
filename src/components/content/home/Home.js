@@ -4,11 +4,9 @@ import './Home.css';
 // import AddPerson from '../../../example/AddPerson';
 // import PersonList from '../../../example/PersonList';
 import PersonById from '../../../example/PersonById';
-
 import Counter from '../../counter/counter2container';
-
-
 import Card from '../../card/Card';
+import AddPost from '../../blog/NewPost';
 
 class Home extends Component {
 	render() {
@@ -175,7 +173,30 @@ class Home extends Component {
 				 		</div>
 				 	</div>
 			 	</section>
-				 {/*<!-- Example end -->*/}
+				 {/*<!-- Counter end -->*/}
+				
+
+				{/*<!-- Blog Posts with Redux Start-->*/}
+					<section className="section_2 bg-light py-5">
+			 		<div className="container">
+			 			<div className="row">
+				 			<div className="col text-center mb-5">
+				 			  <h5 className="section_heading">Blog Posts Example</h5>
+				 			</div>
+				 		</div>
+				 		<div className="row">
+						 	 	<div className="col-12 col-md-6">
+									  <h3>Add Post</h3>
+									<AddPost />  
+			   		    		</div>
+								<div className="col-12 col-md-6">
+									<h3>Post List</h3>
+									<AddPost />  
+			   		    		</div>
+				 		</div>
+				 	</div>
+			 	</section>
+				 {/*<!-- Blog Posts with Redux End -->*/}
 				
 
 			</div>
