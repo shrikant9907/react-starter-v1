@@ -1,5 +1,5 @@
 // Blog Reducer
-const blogReducer = (state = [], action) => {
+const BlogReducer = (state = [], action) => {
 
     switch(action.type) {
         
@@ -14,5 +14,5 @@ const blogReducer = (state = [], action) => {
     }
 
 };
-
-export default blogReducer; 
+ 
+export default BlogReducer; 
