@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import React from 'react';
 import axios from 'axios';
 
@@ -22,7 +23,7 @@ export default class PersonList extends React.Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <form onSubmit={this.handleSubmit}>
           <label>
             Person ID:
@@ -30,7 +31,7 @@ export default class PersonList extends React.Component {
           </label>
           <button type="submit">Delete</button>
         </form>
-      </div>
+      </Fragment>
     )
   }
 }

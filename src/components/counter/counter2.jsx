@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 class Counter2 extends Component {
     render() {
+
         const { counter, increment, decrement, reset }  = this.props;
 
         return (
+            <Fragment>
             <div className="card mb-3">
                 <div className="card-body text-center"><b className="counter_number">{counter}</b></div>
                 <div className="card-footer">
@@ -13,6 +15,7 @@ class Counter2 extends Component {
                     <button className="btn btn-danger  w-100 mb-2" onClick={reset} >Reset</button>
                 </div>
             </div>
+            </Fragment>
         )
     }
 }

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 
 // API
@@ -30,7 +30,7 @@ class AddPerson extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <form onSubmit={this.handleSubmit}>
           <label>
             Person Name:
@@ -38,7 +38,7 @@ class AddPerson extends Component {
           </label>
           <button type="submit">Add</button>
         </form>
-      </div>
+      </Fragment>
     )
   }
 }

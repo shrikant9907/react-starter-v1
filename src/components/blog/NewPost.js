@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from "react";
 import './Post.css';
 
 import Button from '../buttons/Button';
@@ -48,6 +48,7 @@ class NewPost extends Component {
 
    render() {
      return (
+      <Fragment>
         <div className="card px-4 py-5">
           <form action="" onSubmit={ this.handleSubmit }>
             <div className="form-group">
@@ -71,6 +72,7 @@ class NewPost extends Component {
             </div>
           </form>
         </div>
+      </Fragment>  
      );
    }
 
