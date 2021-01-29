@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 
 
 // API
-import  ApiServices  from  '../api/ApiServices';
+import  ApiServices  from  '../_services/apiServices';
 const  Api  =  new  ApiServices();
 
 class AddPerson extends Component {

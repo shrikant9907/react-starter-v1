@@ -1,18 +1,18 @@
 import React , {Component, Fragment} from 'react'; 
 import './App.css';
 
-import Header from './components/header/Header';
+// import Header from './components/header/Header';
 import Content from './components/content/Content';
-import Footer from './components/footer/Footer';
+// import Footer from './components/footer/Footer';
 
 class App extends Component {
  
   render() { 
     return (
       <Fragment>
-          <Header brandname="Company Name" />
+          {/* <Header brandname="Company Name" /> */}
           <Content />
-          <Footer />
+          {/* <Footer /> */}
       </Fragment>
     );
   }
