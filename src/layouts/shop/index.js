@@ -1,10 +1,10 @@
-import './About.scss';
+import './Shop.scss';
 import React from 'react';
 import Banner from '../../components/banner/Banner';
 import Carousel from '../../components/carousel/Carousel'; 
 import UsersListCarousel from '../../components/carousel/usersListCarousel'; 
   
-const About = (props) => {
+const shop = (props) => {
   return (
     <>
       <div className="seperator s20"></div>
@@ -21,4 +21,4 @@ const About = (props) => {
   )
 }
 
-export default About;
+export default shop;

@@ -1,9 +1,10 @@
-import './Home.scss';
+import './Checkout.scss';
+import React from 'react';
 import Banner from '../../components/banner/Banner';
 import Carousel from '../../components/carousel/Carousel'; 
 import UsersListCarousel from '../../components/carousel/usersListCarousel'; 
   
-const Home = (props) => {
+const Checkout = (props) => {
   return (
     <>
       <div className="seperator s20"></div>
@@ -20,4 +21,4 @@ const Home = (props) => {
   )
 }
 
-export default Home;
+export default Checkout;

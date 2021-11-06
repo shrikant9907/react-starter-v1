@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Carousel from './Carousel'; 
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import Api from '../../_services/http';
+import Api from '../../_services/Api';
 const api = new Api();
 
 export default class UsersListCarousel extends Component {

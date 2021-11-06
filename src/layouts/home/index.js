@@ -1,4 +1,5 @@
 import './Home.scss';
+import React from 'react';
 import Banner from '../../components/banner/Banner';
 import Carousel from '../../components/carousel/Carousel'; 
 import UsersListCarousel from '../../components/carousel/usersListCarousel'; 

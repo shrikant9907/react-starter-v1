@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Row, Col } from 'react-bootstrap';  
-import Api from '../../_services/http';
+import Api from '../../_services/Api';
 const api = new Api();
 
 export default class PhotoGallery extends Component {
