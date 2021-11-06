@@ -1,6 +1,8 @@
 import axios from 'axios';
+// import  ApiServices  from  './_apiServices';
+// const  Api  =  new  ApiServices();
 
-const API_URL = process.env.REACT_APP_API;
+const API_URL = process.env.REACT_APP_API_URL;
 
 class Api{
 
