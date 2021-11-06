@@ -9,7 +9,7 @@ React Starter Template for Front End Web Application.
 - In Build Website Pages like Home, About, Contact, Blog, Blog Listing, Shop, Cart, Checkout.
 - AXIOS for Thrid Party API's
 
-Created By:
-Shrikant Yadav
-Full Stack Web Developer from India
+## Created By:
+Shrikant Yadav <br />
+Full Stack Web Developer from India <br />
 7+ Years in Web Development Technologies.
