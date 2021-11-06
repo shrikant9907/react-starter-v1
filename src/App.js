@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Router>
 
-      <BsNavbar />
+      <BsNavbar brandname="React Starter Logo" logotype="text" logosrc="" />
       
       <Routes>
         <Route exact path="/" element={ <Home /> } />

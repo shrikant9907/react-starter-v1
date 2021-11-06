@@ -17,13 +17,42 @@ class BsNavbar extends Component {
       this.state = {
         logotype: this.props.logotype,
         logosrc: this.props.logosrc,
-        logoalt: 'Company Site Logo'
+        logoalt: this.props.brandname,
+        navItems: [
+          {
+            name: 'Home',
+            to: '/',
+            show: true
+          },
+          {
+            name: 'About',
+            to: '/about',
+            show: true
+          },
+          {
+            name: 'Blog',
+            to: '/blog',
+            show: true
+          },
+          {
+            name: 'Shop',
+            to: '/shop',
+            show: true
+          },
+          {
+            name: 'Contact Us',
+            to: '/contact',
+            show: true
+          }
+        ]
       }
 
     }
 
     render(){ 
 
+      const { navItems } = this.state;
+      
       let logo;
       if (this.state.logotype==='image') {
         logo = <Image src={this.state.logosrc} classes="logo-image img-fluid" alt={this.state.logoalt} />
@@ -38,17 +67,19 @@ class BsNavbar extends Component {
                     <Container>
                       <Navbar.Brand>
                         <Link className="text-dark text-decoration-none" to='/'>
-                          { logo ? logo :  process.env.REACT_APP_NAME}
+                          { logo }
                         </Link>
                       </Navbar.Brand>
                       <Navbar.Toggle aria-controls="basic-navbar-nav" />
                       <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                          <Link className="nav-link" to='/'>Home</Link>
-                          <Link className="nav-link" to='/about'>About</Link>
-                          <Link className="nav-link" to='/blog'>Blog</Link>
-                          <Link className="nav-link" to='/shop'>Shop</Link>
-                          <Link className="nav-link" to='/contact'>Contact Us</Link>
+                          { navItems.map((item, index) => {
+                            if (item.show) {
+                              return <Link className="nav-link" to={ item.to }>{ item.name }</Link> 
+                            } else {
+                              return '';
+                            }
+                          }) }
                           {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
