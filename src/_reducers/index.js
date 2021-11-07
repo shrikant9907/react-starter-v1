@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import BlogReducer from './blogReducer';
+import blogReducer from './blogReducer';
 import CounterReducer from './counterReducer';
 
 const reducer = combineReducers({
-    posts: BlogReducer,
+    blog: blogReducer,
     counter: CounterReducer
 }); 
 
