@@ -4,7 +4,8 @@ import axios from 'axios';
 
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
-class Api{
+class Api {
+
   getToken = () => {
     let userToken;
     try {
@@ -16,7 +17,7 @@ class Api{
     }
   };
 
-  getData(endpoint, isToken) {
+  getData = (endpoint, isToken) => {
     let authToken;
     if (isToken) {
       authToken = 'JWT '+ this.getToken();
@@ -30,7 +31,8 @@ class Api{
     }
   }  
 
-  postData(endpoint, isToken, data){let authToken;
+  postData = (endpoint, isToken, data) => {
+    let authToken;
     if (isToken) {
       authToken = 'JWT '+ this.getToken();
       return axios.post(endpoint, data, {
@@ -43,11 +45,12 @@ class Api{
     }
   }
 
-  getDataById(pk) {
+  getDataById = (pk) => {
     return axios.get(pk);
   }
 
-  putData(endpoint, isToken, data){let authToken;
+  putData = (endpoint, isToken, data) => {
+    let authToken;
     if (isToken) {
       authToken = 'JWT '+ this.getToken();
       return axios.put(endpoint, data, {
@@ -60,7 +63,8 @@ class Api{
     }
   }
 
-  deleteData(endpoint, isToken, data){let authToken;
+  deleteData = (endpoint, isToken, data) => {
+    let authToken;
     if (isToken) {
       authToken = 'JWT '+ this.getToken();
       return axios.delete(endpoint, data, {

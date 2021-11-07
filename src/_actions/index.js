@@ -1,10 +1,17 @@
-import api from "../_services/Api";
 import * as actionTypes from "../_actionTypes";
+import  Api  from  '../_services/Api';
+const  api  =  new  Api();
 
-// Fetch Posts Action - Using Array Function
+// Fetch Posts Action Creator - Redux Thunk
 export const fetch_posts = () => (dispatch) => {
-    const response = api.get("/posts");
-    dispatch(set_post(response))
+  api.getData('posts').then((res) => {
+    if (res.status === 200) {
+      dispatch(set_post(res.data));
+    }
+  })
+  .catch((error) => {
+    console.log(error);
+  })
 }
 
 // Add Post Action - Using Array Function

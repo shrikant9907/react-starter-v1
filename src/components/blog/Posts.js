@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import { add_post, set_post, delete_post, edit_post } from "../../_actions";
+import { add_post, fetch_posts, delete_post, edit_post } from "../../_actions";
+
+import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
 
 const Posts = () => {
   const posts = useSelector(state => state.blog.posts);
@@ -21,29 +24,24 @@ const Posts = () => {
   };
 
   useEffect(() => {
-    const postApiUrl = process.env.REACT_APP_API_URL + 'posts';
-    fetch(postApiUrl).then((response) => {
-      return response.json()
-    }).then((data) => {
-      dispatch(set_post(data.slice(0 , 5).reverse()));
-    }).catch(error => {
-      console.log("Error", error); 
-    })
+    dispatch(fetch_posts());
   }, [dispatch])
   
   return (
     <> 
-    <ul className="text-left">
+    <ListGroup className="mb-3"> 
       {
-        posts.map((post, index) => {
-          return <li key={post.id} >{post.title}   
-          <button onClick={() => dispatch(delete_post(post.id))}>Delete Post</button>
-          <button onClick={() => dispatch(edit_post(post.id, editPost))}>Edit Post</button>
-          </li>
+        posts.slice(0 , 5).reverse().map((post, index) => {
+          return <ListGroup.Item key={post.id} className="d-flex justify-content-between align-items-start">{ post.title }   
+            <div className="right">
+              <Button className="me-1" size="sm" variant="primary" onClick={() => dispatch(edit_post(post.id, editPost))}>Edit</Button>
+              <Button size="sm" variant="danger" onClick={() => dispatch(delete_post(post.id))}>Delete</Button>
+            </div>
+          </ListGroup.Item>
         })
       }
-    </ul> 
-    <button onClick={() => dispatch(add_post(newPost))}>Add New Post</button>
+    </ListGroup>
+    <Button variant="primary" onClick={() => dispatch(add_post(newPost))}>Add New Post</Button>
     </>
   )
 }

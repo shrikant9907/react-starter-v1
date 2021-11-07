@@ -75,7 +75,7 @@ class BsNavbar extends Component {
                         <Nav className="ms-auto">
                           { navItems.map((item, index) => {
                             if (item.show) {
-                              return <Link className="nav-link" to={ item.to }>{ item.name }</Link> 
+                              return <Link key={index} className="nav-link" to={ item.to }>{ item.name }</Link> 
                             } else {
                               return '';
                             }
