@@ -1,6 +1,6 @@
 import './Home.scss';
 import React from 'react';
-import SampleAutoComplete from '../../components/common/autocomplete/SampleAutoComplete';
+import SampleAutoComplete from '../../components/common/AutoComplete/SampleAutoComplete';
   
 const Home = (props) => {
   return (
