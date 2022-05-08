@@ -12,10 +12,10 @@ registerLocale("en", en);
 const DatePickerField = (props) => {
   const [startDate, setStartDate] = useState(new Date());
   let selectedValue = null;
-  if(props.selected && props.selected === 'today') {
+  if(props.defaultValue && props.defaultValue === 'today') {
      selectedValue = startDate;
-  } else if(props.selected && props.selected !== 'today') {
-    selectedValue = props.selected;
+  } else if(props.defaultValue && props.defaultValue !== 'today') {
+    selectedValue = props.defaultValue;
   }  
 
   const handleOnChange = (e) => {
@@ -38,7 +38,7 @@ const DatePickerField = (props) => {
         maxDate={props.maxDate ? props.maxDate : new Date("31-12-2022")}
         minDate={props.minDate ? props.minDate : new Date("01-01-2022")}
         selected={selectedValue}
-        placeholder={props.placeholder}
+        placeholder={props.placeholder ? props.placeholder : 'Choose a date'}
         readOnly = {props.readOnly}
         autoComplete = "off"                         
         onChange={(e) => handleOnChange(e)}

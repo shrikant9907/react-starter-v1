@@ -15,7 +15,7 @@ const InputField = ({
   onKeyDown,
   disabled,
   autoComplete,
-  defaultValue,
+  // defaultValue,
 }) => {
 
   // Default Max Limit for Input is 100 char
@@ -23,8 +23,8 @@ const InputField = ({
 
   return (
     <React.Fragment>
-      <div className={className ? className : "w-100"}>
-        {!hideLabel && (
+      <div className={className ? className : "w-100 mb-3"}>
+        {label && (
           <label htmlFor={id}>
             {label}
             {required && <span className="text-danger"> *</span>}
@@ -37,8 +37,8 @@ const InputField = ({
           disabled = {disabled}
           name={name}
           id={id}
-          value = {value ? value : ''}
-          defaultValue = {defaultValue}
+          defaultValue = {value ? value : ''}
+          // defaultValue = {defaultValue}
           onChange={onChange}
           autoComplete= {autoComplete ? autoComplete : 'off'}
           onKeyDown={onKeyDown}

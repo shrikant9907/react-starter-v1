@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CurrencyInput from "react-currency-input-field";
 
-const CurrencyField = ({ focused, suffix, maxLength, decimalLimit, conversion, defaultValue, onChange, onBlur, onKeyDown, disabled }) => {
+const CurrencyField = ({ label, id, required, focused, suffix, maxLength, decimalLimit, conversion, defaultValue, onChange, onBlur, onKeyDown, disabled }) => {
 
   const [focusedInput, setFocusedInput] = useState(focused);
   const [autoFocusInput, setAutoFocusInput] = useState(false);
@@ -68,7 +68,14 @@ const CurrencyField = ({ focused, suffix, maxLength, decimalLimit, conversion, d
 
   return (
     <React.Fragment>
-      <div className="form-group accounting-field">
+      <div className="form-group currency-field mb-3">
+
+        {label && (
+          <label htmlFor={id}>
+            {label}
+            {required && <span className="text-danger"> *</span>}
+          </label>
+        )}
 
         {focusedInput && (
           <CurrencyInput
