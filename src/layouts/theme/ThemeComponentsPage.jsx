@@ -1,9 +1,11 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
+import Checkbox from '../../components/common/Form/CheckBox/CheckBox';
 import CurrencyField from '../../components/common/Form/CurrencyField';
 import DatePickerField from '../../components/common/Form/DatePickerField';
 import EmailField from '../../components/common/Form/EmailField';
 import InputField from '../../components/common/Form/InputField';
+import RadioButton from '../../components/common/Form/Radio/RadioButton';
 import SelectField from '../../components/common/Form/SelectField';
 import TextAreaField from '../../components/common/Form/TextAreaField';
 import TimePickerField from '../../components/common/Form/TimePickerField';
@@ -46,6 +48,12 @@ const ThemeComponentsPage = (props) => {
             </Col>
             <Col md="6">
               <SelectField options={options} label="Select Options Label"/>
+            </Col>
+            <Col md="6">
+              <Checkbox label="Check Box"/>
+            </Col>
+            <Col md="6">
+              <RadioButton label="Radio Box"/>
             </Col>
             <Col md="6">
               <TextAreaField value="Code Matra Test" placeholder="Enter a value" label="Text Area Label" />

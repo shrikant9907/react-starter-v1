@@ -1,7 +1,7 @@
 import React from "react";
 import "./CheckBox.scss";
 
-const Checkbox = ({ text, id, className, name, value, onChange, defaultValue, disabled }) => {
+const Checkbox = ({ label, id, className, name, value, onChange, defaultValue, disabled }) => {
   let classes = 'form-group';
   if (className) {
     classes = className;
@@ -22,7 +22,7 @@ const Checkbox = ({ text, id, className, name, value, onChange, defaultValue, di
             checked={true}
             name={inputName}
             value={value}
-            onChange={(e) => onChange(e)}
+            onChange={onChange}
           />
         : 
           <input
@@ -32,10 +32,10 @@ const Checkbox = ({ text, id, className, name, value, onChange, defaultValue, di
             id={id}
             name={inputName}
             value={value}
-            onChange={(e) => onChange(e)}
+            onChange={onChange}
           />
         }
-        <span className="normal-text">{text}</span>
+        <span className="normal-text">{label}</span>
         <span className="checkmark"></span>
       </label>
     </div>

@@ -8,7 +8,7 @@
   -ms-user-select: none;
   user-select: none;
   line-height: 1.5 !important;
-  color: var(--black);
+  color: #000;
   font-weight: 650;
   letter-spacing: 0.2px;
   font-size: 16px;
@@ -53,7 +53,7 @@
   top: 2px;
   width: 6px;
   height: 12px;
-  border: solid var(--white);
+  border: solid #fff;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -61,5 +61,5 @@
 }
 
 .css-radio input:checked ~ .checkmark {
-  background-color: var(--theme-color-main);
+  background-color: blue;
 }
