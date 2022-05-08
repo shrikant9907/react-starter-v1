@@ -3,6 +3,14 @@
 /.pnp
 .pnp.js
 
+*.sublime*
+*.zip*
+
+node_modules
+build
+bower_components
+
+
 # testing
 /coverage
 
