@@ -21,8 +21,10 @@ const TimePickerField = ({
   const [isValidTime, setIsValidTime] = useState(true);
 
   useEffect(() => {
-    let valid = moment(value, "H:mm", true).isValid();
-    setIsValidTime(valid)
+    if (value) {
+      let valid = moment(value, "H:mm", true).isValid();
+      setIsValidTime(valid)
+    }
   }, [value])
   
   const onKeyDown = (e) => {
