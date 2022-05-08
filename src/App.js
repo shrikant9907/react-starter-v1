@@ -1,12 +1,7 @@
 import React from 'react'; 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./layouts/home";
-import About from "./layouts/about";
-import Blog from "./layouts/blog";
-import Shop from "./layouts/shop";
-import Contact from "./layouts/contact";
 import BsNavbar from './components/navbar/Navbar';
-
+import { TopMenusRoutes } from './_config/TopMenus';
 
 const App = () => {
   return (
@@ -15,12 +10,14 @@ const App = () => {
       <BsNavbar brandname="React Starter Logo" logotype="text" logosrc="" />
       
       <Routes>
-        <Route exact path="/" element={ <Home /> } />
-        <Route path="/about" element={ <About /> }/>
-        <Route path="/blog" element={ <Blog /> }/>
-        <Route path="/blog/:blogid" element={ <Blog /> }/>
-        <Route path="/shop" element={ <Shop /> }/>
-        <Route path="/contact" element={ <Contact /> }/>
+        {/* Top Menu Routes Configuration is in _config/TopMenus.js */}
+
+        { 
+          TopMenusRoutes && TopMenusRoutes.map((route, ridx) => {
+            return <Route {...route} key={ridx} /> 
+          }) 
+        }
+     
       </Routes>
 
     </Router>
