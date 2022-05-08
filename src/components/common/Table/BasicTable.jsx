@@ -11,20 +11,20 @@ const BasicTable = (props) => {
 
         {
           heading ?
-            <div className="text-muted mb-3">
-              <i>{heading}</i>
+            <div className="table-heading mb-2">
+              {heading}
             </div>
             : ''
         }
 
         {head || data ?
-          <Table bordered hover className="mb-4">
+          <Table striped bordered hover className="mb-3">
             {head ?
               <thead>
                 <tr>
                   {
-                    head.map((data, index) => {
-                      return <th> {data} </th>
+                    head.map((tdItem, index) => {
+                      return <th> {tdItem} </th>
                     })
                   }
                 </tr>
@@ -38,7 +38,7 @@ const BasicTable = (props) => {
                     return <tr key={index}>
                       {
                         (typeof item === "object") ?
-                          Object.values(item).map((value, idx) => {
+                          item.map((value, idx) => {
                             return <td key={idx}> {value} </td>
                           })
                           :

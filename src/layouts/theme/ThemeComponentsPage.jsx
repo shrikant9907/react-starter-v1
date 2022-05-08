@@ -9,7 +9,8 @@ import RadioButton from '../../components/common/Form/Radio/RadioButton';
 import SelectField from '../../components/common/Form/SelectField';
 import TextAreaField from '../../components/common/Form/TextAreaField';
 import TimePickerField from '../../components/common/Form/TimePickerField';
-  
+import BasicTable from '../../components/common/Table/BasicTable';
+
 const ThemeComponentsPage = (props) => {
 
   const options = [
@@ -21,9 +22,9 @@ const ThemeComponentsPage = (props) => {
       label: 'Option 2',
       value: '2',
     }
-  ]; 
-  
-  
+  ];
+
+
   return (
     <>
       <div className='py-3'>
@@ -38,25 +39,32 @@ const ThemeComponentsPage = (props) => {
               <EmailField required={true} value="" placeholder="Enter a email" label="Email Label" />
             </Col>
             <Col md="6">
-              <CurrencyField placeholder="Enter a value" label="Currency Input Label"/>
+              <CurrencyField placeholder="Enter a value" label="Currency Input Label" />
             </Col>
             <Col md="6">
-              <DatePickerField defaultValue="today" label="Date Picker Label"/>
+              <DatePickerField defaultValue="today" label="Date Picker Label" />
             </Col>
             <Col md="6">
-              <TimePickerField label="Time Picker Label"/>
+              <TimePickerField label="Time Picker Label" />
             </Col>
             <Col md="6">
-              <SelectField options={options} label="Select Options Label"/>
+              <SelectField options={options} label="Select Options Label" />
             </Col>
             <Col md="6">
-              <Checkbox label="Check Box"/>
+              <Checkbox label="Check Box" />
             </Col>
             <Col md="6">
-              <RadioButton label="Radio Box"/>
+              <RadioButton label="Radio Box" />
             </Col>
             <Col md="6">
               <TextAreaField value="Code Matra Test" placeholder="Enter a value" label="Text Area Label" />
+            </Col>
+            <Col md="6">
+              <BasicTable
+                heading="Basic Table"
+                head = {["Col1", "Col2", "Col3"]}
+                data = {[["val1", "val2", "val3"], ["val1", "val2", "val3"]]}
+              />
             </Col>
           </Row>
         </div>
